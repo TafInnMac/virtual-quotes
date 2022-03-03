@@ -1,0 +1,33 @@
+<div id="bar" fxLayout="row" fxLayoutAlign="start center">
+	<div id="a" fxLayoutAlign="center center">
+		<mat-icon>search</mat-icon>
+	</div>
+	<div class="b" fxLayoutAlign="start center" fxFlex>
+		<mat-form-field floatLabel="never" fxFlex>
+			<input matInput [(ngModel)]="searchText" autofocus #searchTerm (keyup)="filterQuote(searchTerm.value)">
+			<mat-placeholder class="placeholder">Search Quotes</mat-placeholder>
+		</mat-form-field>
+	</div>
+	<div id="authorFilter" [fxHide.lt-sm]="true">
+	<div id="c" fxLayout="row">
+		<button mat-button [matMenuTriggerFor]="menu" fxFlex>
+			<div class="button-contents" fxLayoutAlign="space-between center">
+					<!-- <span *ngIf="selectedAuthor === ''" [fxHide.lt-md]="true" [fxHide.lt-lg]="true">Who Said It?</span> -->
+					<!-- <span [fxHide.lt-md]="true" [fxHide.lt-lg]="true">{{selectedAuthor}}</span> -->
+					<!-- <span *ngIf="selectedAuthor === ''" [fxShow.lt-md]="true" [fxShow.lt-lg]="true"
+						[fxHide.lg]="true">Author</span> -->
+					<div *ngIf="selectedAuthor === '';then default else selected"></div>
+					<!-- <span *ngIf="selectedAuthor === '';then content else other_content" [fxHide.md]="true">Author</span> -->
+					<!-- <span [fxShow.lt-md]="true" [fxShow.lt-lg]="true" [fxHide.lg]="true">{{selectedAuthor}}</span> -->
+					<ng-template #default><span>Author</span></ng-template>
+					<ng-template #selected><span>{{selectedAuthor}}</span></ng-template>
+					<mat-icon>arrow_drop_down</mat-icon>
+				</div>
+			</button>
+			</div>
+		<mat-menu #menu="matMenu" class="author-list" overlayPanelClass="test-overlay">
+			<button *ngFor="let author of authors" mat-menu-item #authorFilter
+				(click)="selectAuthor(author)">{{author}}</button>
+		</mat-menu>
+	</div>
+</div>

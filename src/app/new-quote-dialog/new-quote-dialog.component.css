@@ -1,0 +1,62 @@
+.new-quote-modal {
+    /* border-radius: 0px; */
+    /* border: #b78240 solid 10px; */
+    padding: none;
+    /* background-color: #E7B680; */
+}
+
+::ng-deep .mat-dialog-container {
+    /* border-radius: 0px; */
+    /* border: #B78240 solid 10px; */
+    /* background-color: #E7B680; */
+    background-color: #ffc;
+    /* background: url('../quote-board/board2.jpg'); */
+}
+
+.add-quote-button {
+    background-color: #666;
+	color: #fff
+}
+
+textarea {
+    /* font-style: italic; */
+    text-align: center;
+    resize: none;
+    font-size: 30px;
+    font-weight: 400;
+}
+
+::ng-deep mat-option {
+    background-color: #ffc;
+}
+
+/* ::ng-deep .mat-option.mat-active {
+    background-color: #E7B680;
+} */
+
+.author-field {
+    padding: 0;
+    /* margin-top: -2.80vh; */
+    text-align: center;
+    font-size: 20px;
+    font-weight: 100;
+	font-style: italic;
+}
+
+/* .quote-date {
+    margin-top: -0.8vh;
+} */
+/* ::ng-deep .mat-form-field-appearance-outline.mat-focused .mat-form-field-outline-thick {
+    color: #414140;
+} */
+.quote-added {
+    background-color: #FEFFEC;
+}
+
+::ng-deep .mat-form-field-appearance-outline .mat-form-field-outline {
+    color: #FEFFEC;
+}
+
+::ng-deep .mat-form-field-appearance-outline.mat-focused .mat-form-field-outline-thick {
+    color: #FEFFEC;
+}
