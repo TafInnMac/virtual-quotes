@@ -3,8 +3,8 @@
 
 	<body fxLayout="column">
 		<div id="search" fxLayout="row" fxLayoutAlign="center center">
-			<app-search-bar [fxFlex]="normalFlex" [fxFlex.lt-md]="ltMdFlex" [authors]="authorsCopy" [searchText]="searchText"
-				(filterEvent)="filterQuotes($event)">
+			<app-search-bar [fxFlex]="normalFlex" [fxFlex.lt-md]="ltMdFlex" [authors]="authorsCopy"
+				[searchText]="searchText" (filterEvent)="filterQuotes($event)">
 			</app-search-bar>
 		</div>
 		<div class="container" fxLayout="column wrap" fxLayoutAlign="space-around center">

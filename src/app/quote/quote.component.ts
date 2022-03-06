@@ -1,6 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
 
-import { QuoteService } from '../quote.service';
 import { Quote } from './quote.model';
 
 @Component({
@@ -11,7 +10,7 @@ import { Quote } from './quote.model';
 export class QuoteComponent implements OnInit {
 
 	@Input() quote!: Quote;
-	constructor(private quoteService: QuoteService) { }
+	constructor() { }
 
 	ngOnInit(): void {
 	}

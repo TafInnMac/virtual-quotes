@@ -1,99 +1,51 @@
 #bar {
-  height: 55px;
-  /* width: inherit; */
-  background-color: #666;
-  /* border-style: solid; */
-  /* color: #fff; */
-  border-radius: 100px;
-  border-style: solid;
-  border-width: 0.5px;
-  border-color: #fff;
+	height: 55px;
+	background-color: #666;
+	border-radius: 100px;
+	border-style: solid;
+	border-width: 0.5px;
+	border-color: #fff;
 }
 
 button {
-  padding: 10px;
+	padding: 10px;
 }
-
-/* .c:hover {
-  background-color: skyblue;
-} */
-
-/* button :hover {
-	background-color: cyan;
-} */
 
 .author-list {
-  /* width: fill;
-  background-color: lightcoral;
-  width: auto; */
-  height: 200px;
-  overflow-y: scroll;
+	height: 200px;
+	overflow-y: scroll;
 }
 
-#a {
-  /* background-color: red; */
-  /* width: auto; */
-  height: inherit;
-  width: 55px;
-  /* height: auto; */
-  /* border-radius: 100px 0 0 100px;
-  border-style: solid none solid solid;
-  border-width: 0.5px;
-  border-color: #fff; */
+#searchIcon {
+	height: inherit;
+	width: 55px;
 }
 
-.b {
-  /* background-color:cyan; */
-  /* width: auto; */
-  /* height: auto; */
-  /* border-radius: 0 5em 5em 0; */
-  /* border-style: solid solid solid none;
-  border-width: 0.5px;
-  border-color: #fff;
-  caret-color: #fff; */
+#filterButton {
+	width: 150px;
+	border-style: none none none solid;
+	border-width: 0.5px;
 }
-
-/* .b > mat-form-field.mat-form-field {
-    font-size: 18px;
-} */
-
-#c {
-  /* background-color: lavender; */
-  width: 150px;
-  /* height: auto; */
-  /* border-radius: 0 100px 100px 0; */
-  border-style: none none none solid;
-  border-width: 0.5px;
-  /* border-color: #fff; */
-}
-
-/* #c > button {
-	margin: 5px 50px;
-} */
-
-/* .test-overlay {
-	width: 500px;
-} */
 
 .mat-form-field {
-  font-size: 20px;
+	font-size: 20px;
 }
 .mat-form-field-appearance-legacy .mat-form-field-wrapper {
-  padding: 0;
+	padding: 0;
 }
 .mat-form-field-underline {
-  display: none;
+	display: none;
 }
 .mat-form-field-appearance-legacy .mat-form-field-infix {
-  border: 0;
+	border: 0;
 }
 
 .placeholder {
-    color: #fff;
+	color: #fff;
 }
 
 .mat-focused .placeholder {
-    color: #8ab4f8;
+	color: #8ab4f8;
 }
 
 .mat-menu-panel {
