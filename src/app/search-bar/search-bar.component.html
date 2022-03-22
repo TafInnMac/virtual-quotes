@@ -4,7 +4,7 @@
 	</div>
 	<div id="searchField" fxLayoutAlign="start center" fxFlex>
 		<mat-form-field floatLabel="never" fxFlex>
-			<input matInput [(ngModel)]="searchText" autofocus #searchTerm (keyup)="filterQuote(searchTerm.value)">
+			<input matInput [(ngModel)]="searchText" autofocus #searchTerm (keyup)="filterQuote([searchTerm.value, selectedAuthor])">
 			<mat-placeholder class="placeholder">Search Quotes</mat-placeholder>
 		</mat-form-field>
 	</div>
@@ -20,8 +20,7 @@
 			</button>
 		</div>
 		<mat-menu #menu="matMenu" class="author-list" overlayPanelClass="test-overlay">
-			<button *ngFor="let author of authors" mat-menu-item #authorFilter
-				(click)="selectAuthor(author)">{{author}}</button>
+			<button *ngFor="let author of authors" mat-menu-item #authorFilter (click)="selectAuthor(author)">{{author}}</button>
 		</mat-menu>
 	</div>
 </div>

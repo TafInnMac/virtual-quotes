@@ -1,7 +1,5 @@
 import { Component, OnInit, Input, Output, EventEmitter, ViewEncapsulation, HostListener } from '@angular/core';
 
-import { QuoteService } from '../quote.service';
-
 @Component({
 	selector: 'app-search-bar',
 	templateUrl: './search-bar.component.html',
@@ -46,10 +44,10 @@ export class SearchBarComponent implements OnInit {
 
 	selectAuthor(author: string) {
 		author !== 'All' ? this.selectedAuthor = author : this.selectedAuthor = '';
-		this.filterQuote(this.selectedAuthor);
+		this.filterQuote([this.searchText, this.selectedAuthor]);
 	}
 
-	filterQuote(text: string = '', author?: string) {
-		this.filterEvent.emit(text);
+	filterQuote(event: string[] = ['', '']) {
+		this.filterEvent.emit(event);
 	}
 }

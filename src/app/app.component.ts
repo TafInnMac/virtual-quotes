@@ -1,5 +1,4 @@
 import { Component, HostListener, OnInit, Input } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
 import { FilterPipe } from './filter.pipe';
 import { MatDialog } from '@angular/material/dialog';
 
@@ -28,12 +27,13 @@ export class AppComponent implements OnInit {
 
 	isFetching = false;
 
-	constructor(private http: HttpClient, private quoteService: QuoteService, private filterPipe: FilterPipe, public dialog: MatDialog) { }
+	constructor(private quoteService: QuoteService, private filterPipe: FilterPipe, public dialog: MatDialog) { }
 
 	ngOnInit(): void {
 		this.isFetching = true;
 		this.quoteService.fetchQuotes().subscribe(quotes => {
 			this.isFetching = false;
+			this.quoteService.shuffleQuotes(quotes);
 			this.loadedQuotes = quotes;
 			this.quotesCopy = this.loadedQuotes;
 			let allAuthors: string[] = this.loadedQuotes.map(quote => { return quote.author });
@@ -41,7 +41,6 @@ export class AppComponent implements OnInit {
 			this.authors.unshift('All');
 			this.authorsCopy = this.authors;
 		})
-
 	}
 
 	@HostListener('window:scroll')
@@ -77,8 +76,8 @@ export class AppComponent implements OnInit {
 		});
 	}
 
-	filterQuotes(text: string) {
-		this.quotesCopy = this.filterPipe.transform(this.loadedQuotes, text);
+	filterQuotes(filterEvent: string[]) {
+		this.quotesCopy = this.filterPipe.transform(this.loadedQuotes, filterEvent[0], filterEvent[1]);
 	}
 
 	openDialog() {
