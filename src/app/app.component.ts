@@ -33,7 +33,7 @@ export class AppComponent implements OnInit {
 		this.isFetching = true;
 		this.quoteService.fetchQuotes().subscribe(quotes => {
 			this.isFetching = false;
-			this.quoteService.shuffleQuotes(quotes);
+			// this.quoteService.shuffleQuotes(quotes);
 			this.loadedQuotes = quotes;
 			this.quotesCopy = this.loadedQuotes;
 			let allAuthors: string[] = this.loadedQuotes.map(quote => { return quote.author });
