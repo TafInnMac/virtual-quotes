@@ -4,12 +4,12 @@
 	</div>
 	<div id="searchField" fxLayoutAlign="start center" fxFlex>
 		<mat-form-field floatLabel="never" fxFlex>
-			<input matInput [(ngModel)]="searchText" autofocus #searchTerm (keyup)="filterQuote([searchTerm.value, selectedAuthor])">
+			<input data-test-id="quoteFilter" matInput [(ngModel)]="searchText" autofocus #searchTerm (keyup)="filterQuote([searchTerm.value, selectedAuthor])">
 			<mat-placeholder class="placeholder">Search Quotes</mat-placeholder>
 		</mat-form-field>
 	</div>
 	<div id="authorFilter" [fxHide.lt-sm]="true">
-		<div id="filterButton" fxLayout="row">
+		<div data-test-id="authorFilterBtn" id="filterButton" fxLayout="row">
 			<button mat-button [matMenuTriggerFor]="menu" fxFlex>
 				<div class="button-contents" fxLayoutAlign="space-between center">
 					<div *ngIf="selectedAuthor === '';then default else selected"></div>

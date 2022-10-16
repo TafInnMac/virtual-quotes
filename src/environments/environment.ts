@@ -6,14 +6,15 @@ export const environment = {
 	production: false,
 	// For Firebase JS SDK v7.20.0 and later, measurementId is optional
 	firebaseConfig: {
-		apiKey: "AIzaSyDqwNzmqUfeBdir5PfPIvMorAYNu40Jc8E",
-		authDomain: "quotes-board-f94ec.firebaseapp.com",
-		databaseURL: "https://quotes-board-f94ec.firebaseio.com",
-		projectId: "quotes-board-f94ec",
-		storageBucket: "quotes-board-f94ec.appspot.com",
-		messagingSenderId: "477457420485",
-		appId: "1:477457420485:web:7980e8957759949c3ba0ac",
-		measurementId: "G-2T0X00LSBK"
+		apiKey: "AIzaSyAQl46Su7QQfuWAM3kHCzkRhHyP1Z_rrPw",
+		authDomain: "quotes-board-uat.firebaseapp.com",
+		databaseURL: "https://quotes-board-uat-default-rtdb.europe-west1.firebasedatabase.app",
+		projectId: "quotes-board-uat",
+		storageBucket: "quotes-board-uat.appspot.com",
+		messagingSenderId: "943504304343",
+		appId: "1:943504304343:web:68ab1c9fd64a2897fee892",
+		measurementId: "G-EH8G7QJ6KN"
+
 	}
 };
 

@@ -1,4 +1,4 @@
-<ul id="container" fxLayout="row wrap" fxLayoutAlign="space-around center">
+<ul data-test-id="quotes-grid" id="container" fxLayout="row wrap" fxLayoutAlign="space-around center">
 	<li *ngFor="let quote of quotes" fxLayout="column" fxLayoutAlign="space-around center">
 		<app-quote [quote]="quote"></app-quote>
 	</li>

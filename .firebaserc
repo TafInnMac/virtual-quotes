@@ -1,5 +1,7 @@
 {
   "projects": {
-    "default": "quotes-board-f94ec"
-  }
+    "default": "quotes-board-f94ec",
+    "uat": "quotes-board-uat"
+  },
+  "targets": {}
 }

@@ -8,7 +8,7 @@
 			</app-search-bar>
 		</div>
 		<div class="container" fxLayout="column wrap" fxLayoutAlign="space-around center">
-			<div *ngIf="quotesCopy.length < 1 && !isFetching" id="noQuotes" fxLayout="column wrap"
+			<div *ngIf="quotesCopy.length < 1 && !isFetching" data-test-id="no-quotes" id="noQuotes" fxLayout="column wrap"
 				fxLayoutAlign="center center">
 				<h1>No quotes found!</h1>
 			</div>
@@ -19,11 +19,11 @@
 				<mat-spinner [diameter]="300"></mat-spinner>
 			</div>
 		</div>
-		<button class="add-new-quote" mat-fab matTooltip="Add new quote" (click)="openDialog()"
+		<button data-test-id="addQuoteBtn" class="add-new-quote" mat-fab matTooltip="Add new quote" (click)="openDialog()"
 			matTooltipClass="mat-tooltip" fxLayout="row" fxLayoutAlign="space-around center">
 			<mat-icon>create</mat-icon>
 		</button>
-		<button class="back-to-top" *ngIf="isShow" (click)="gotoTop()" mat-fab matTooltip="Return to top"
+		<button data-test-id="backToTopBtn" class="back-to-top" *ngIf="isShow" (click)="gotoTop()" mat-fab matTooltip="Return to top"
 			matTooltipClass="mat-tooltip" fxLayout="row" fxLayoutAlign="space-around center">
 			<mat-icon>arrow_upward</mat-icon>
 		</button>

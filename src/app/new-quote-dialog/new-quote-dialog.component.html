@@ -1,15 +1,15 @@
-<div class="new-quote-modal" fxLayout="column" fxLayoutAlign="start">
+<div data-test-id="new-quote-form" class="new-quote-modal" fxLayout="column" fxLayoutAlign="start">
 	<form [formGroup]="quoteForm" (ngSubmit)="onAddQuote()">
 		<div mat-dialog-content fxLayout="column" fxLayoutAlign="start">
 			<mat-dialog-content>
 				<div class="quote" fxAlign="row">
 					<mat-form-field class="quote-field" fxFlex="100" appearance="outline">
-						<textarea matInput placeholder="What was the quote?" formControlName="quote"></textarea>
+						<textarea data-test-id="quote-input-field" matInput placeholder="What was the quote?" formControlName="quote"></textarea>
 					</mat-form-field>
 				</div>
 				<div fxLayout="row" fxLayoutAlign="end" fxLayoutAlign.lt-md="center">
 					<mat-form-field class="author-field" appearance="outline">
-						<input type="text" matInput [matAutocomplete]="auto" placeholder="Who said it?"
+						<input data-test-id="author-input-field" type="text" matInput [matAutocomplete]="auto" placeholder="Who said it?"
 							formControlName="author" [formControl]="myControl" [matAutocomplete]="auto" #authorField>
 						<mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
 							<mat-option *ngFor="let authorSelect of filteredAuthors | async" [value]="authorSelect">
@@ -21,7 +21,7 @@
 			</mat-dialog-content>
 		</div>
 		<div mat-dialog-actions fxLayout="row" fxLayoutAlign="center">
-			<button class="add-quote-button" mat-raised-button type="submit" (click)="openSnackBar(authorField.value)"
+			<button data-test-id="add-quote-button" class="add-quote-button" mat-raised-button type="submit" (click)="openSnackBar(authorField.value)"
 				[disabled]="!quoteForm.valid" matDialogueClose>Add Quote</button>
 		</div>
 	</form>
